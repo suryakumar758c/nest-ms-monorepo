@@ -1,0 +1,30 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "app/gateway/src",
+  "monorepo": true,
+  "root": "app/gateway",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "app/gateway/tsconfig.json"
+  },
+  "projects": {
+    "app/gateway": {
+      "type": "application",
+      "root": "app/gateway",
+      "entryFile": "main",
+      "sourceRoot": "app/gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "app/gateway/tsconfig.json"
+      }
+    },
+    "app/serviceone": {
+      "type": "application",
+      "root": "app/serviceone",
+      "entryFile": "main",
+      "sourceRoot": "app/serviceone/src",
+      "compilerOptions": {
+        "tsConfigPath": "app/serviceone/tsconfig.json"
+      }
+    }
+  }
+}
